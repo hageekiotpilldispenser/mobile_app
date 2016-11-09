@@ -1,0 +1,12 @@
+<ion-view hide-nav-bar="true">
+  <ion-content has-header="false">
+    <ion-header-bar class="bar-clear">
+      <div class="buttons">
+        <a class="button button-icon ion-arrow-left-c" nav-transition="none" href="#/app/prescription"></a>
+      </div>
+      <h1 class="title">{{ getTitle(id) }}</h1>
+    </ion-header-bar>
+    <img class="medication_img" ng-src="{{ getImage(id) }}" >
+    <div class="medication_desc">{{ getDesc(id) }}</div>
+  </ion-content>
+</ion-view>

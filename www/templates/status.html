@@ -1,0 +1,18 @@
+<ion-view view-title="Status" hide-nav-bar="false">
+  <ion-content has-header="true">
+    <ion-spinner ng-show="LoadingView" icon="spiral"></ion-spinner>
+    <div class="status_summary">
+      <h5 class="status_header">Recent Medication Taken History</h5>
+      <table class="tbl_status">
+          <tr><th></th><th>Morning</th><th>Noon</th><th>Night</th></tr>
+          <tr><td class="header">Today</td><td>Taken</td><td>&nbsp;</td><th>&nbsp;</td></tr>
+          <tr><td class="header">Yesterday</td><td>Taken</td><td>Taken</td><td>Taken</td></tr>
+      </table>
+    </div>
+    <div class="status_summary">
+      <h5 class="status_header">Medication Taken (This Month)</h5>
+      <div google-chart chart="myChartObject" style="height:330px; width:100%;">
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

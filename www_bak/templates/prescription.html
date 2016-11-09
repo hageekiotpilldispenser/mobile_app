@@ -1,0 +1,9 @@
+<ion-view view-title="Prescription">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="medication in medications" href="#/app/medication/{{medication.id}}">
+        {{medication.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,115 @@
+/* Empty. Add your own CSS if you like */
+.bar-custom1 .nav-bar-block ion-header-bar {
+	border-color: rgb(255, 157, 76);
+	background-color: rgb(255, 157, 76);
+}
+.bar-custom2 .nav-bar-block ion-header-bar {
+	border-color: rgb(78, 186, 186);
+	background-color: rgb(78, 186, 186);
+}
+.bar-custom3 .nav-bar-block ion-header-bar {
+	border-color: rgb(121, 210, 121);
+	background-color: rgb(121, 210, 121);
+}
+.bar-custom4 .nav-bar-block ion-header-bar {
+	border-color: rgb(80, 130, 200);
+	background-color: rgb(80, 130, 200);
+}
+.bar-custom5 .nav-bar-block ion-header-bar {
+	border-color: rgb(86, 184, 255);
+	background-color: rgb(86, 184, 255);
+}
+.bar-custom6 .nav-bar-block ion-header-bar {
+	border-color: rgb(150, 150, 150);
+	background-color: rgb(100, 180, 150);
+}
+.my-container {
+  /*background-image:  url("../img/colorful-triangles-background_yB0qTG6.jpg");*/
+  background-repeat: repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  position: absolute;
+}
+.item.transp {
+  background-color: transparent;
+  color: #555;
+}
+.transp .item-content {
+  background-color: transparent !important;
+  color: #555;
+}
+table.tbl_status {
+	width: 100%;
+	font-size: 11px;
+	border: 1px solid black;
+}
+table.tbl_status th {
+	font-weight: bold;
+	border: 1px solid black;
+}
+table.tbl_status td {
+	border: 1px solid black;
+}
+
+table.tbl_status td.header {
+	font-weight: bold;
+}
+.status_summary {
+	width: 90%;
+	padding: 10px 10px 20px 10px;
+	text-align: center;
+	margin: 0 auto;
+}
+h5.status_header {
+	font-size: 12px;
+	text-align: left;
+}
+img.medication_img {
+	width: 100%;
+	height: 270px;
+	object-fit: cover;
+	margin: 0;
+	display: block;
+}
+.medication_desc {
+	width: 90%;
+	margin: 10px auto;
+}
+.prescription_footer {
+	height: 60px;
+}
+.scan-button-text{
+  font-size: 16px;
+}
+.bar.bar-profile {
+  height: 150px;
+	padding: 0px;
+}
+.profile {
+	background-image: url("../img/profile_background.jpg");
+}
+.bar .profile {
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  padding-top: 15px;
+}
+.profile .name {
+  color: #FFFFFF;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+.profile-picture {
+  border-radius: 50%;
+}
+.menu .has-header
+{
+  top: 149px;
+}
