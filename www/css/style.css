@@ -25,7 +25,7 @@
 }
 .my-container {
   /*background-image:  url("../img/colorful-triangles-background_yB0qTG6.jpg");*/
-	top: 150px;
+	top: 22%;
 	background-repeat: repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -84,7 +84,7 @@ img.medication_img {
   font-size: 16px;
 }
 .bar.bar-profile {
-  height: 150px;
+  height: 22%;
 	padding: 0px;
 }
 .profile {
@@ -112,5 +112,5 @@ img.medication_img {
 }
 .menu.has-header
 {
-  top: 149px;
+  top: 22%;
 }
