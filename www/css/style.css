@@ -25,7 +25,8 @@
 }
 .my-container {
   /*background-image:  url("../img/colorful-triangles-background_yB0qTG6.jpg");*/
-  background-repeat: repeat;
+	top: 150px;
+	background-repeat: repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
