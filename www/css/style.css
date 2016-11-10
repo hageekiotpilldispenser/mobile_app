@@ -83,6 +83,12 @@ img.medication_img {
 .scan-button-text{
   font-size: 16px;
 }
+.platform-ios7.platform-cordova:not(.fullscreen).bar-header:not(.bar-subheader).bar-profile {
+  height: 150px;
+}
+.platform-ios7.platform-cordova:not(.fullscreen).has-header.my-container {
+  top: 150px;
+}
 .bar.bar-profile {
   height: 150px;
 	padding: 0px;
