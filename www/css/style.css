@@ -68,7 +68,7 @@ h5.status_header {
 }
 img.medication_img {
 	width: 100%;
-	height: 270px;
+	min-height: 30%;
 	object-fit: cover;
 	margin: 0;
 	display: block;
