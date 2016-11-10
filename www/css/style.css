@@ -68,7 +68,7 @@ h5.status_header {
 }
 img.medication_img {
 	width: 100%;
-	min-height: 30%;
+	height: 30%;
 	object-fit: cover;
 	margin: 0;
 	display: block;
@@ -83,12 +83,6 @@ img.medication_img {
 .scan-button-text{
   font-size: 16px;
 }
-.platform-ios7.platform-cordova:not(.fullscreen).bar-header:not(.bar-subheader).bar-profile {
-  height: 150px;
-}
-.platform-ios7.platform-cordova:not(.fullscreen).has-header.my-container {
-  top: 150px;
-}
 .bar.bar-profile {
   height: 150px;
 	padding: 0px;
@@ -96,7 +90,7 @@ img.medication_img {
 .profile {
 	background-image: url("../img/profile_background.jpg");
 }
-.bar .profile {
+.profile {
   top: 0;
   right: 0;
   left: 0;
@@ -116,7 +110,7 @@ img.medication_img {
 .profile-picture {
   border-radius: 50%;
 }
-.menu .has-header
+.menu.has-header
 {
   top: 149px;
 }
