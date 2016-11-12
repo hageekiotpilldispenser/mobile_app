@@ -94,6 +94,10 @@ img.medication_img {
 .scan-button-text{
   font-size: 100%;
 }
+.platform-ios.platform-cordova .bar.bar-profile {
+  height: 170px;
+	padding: 0px;
+}
 .bar.bar-profile {
   height: 170px;
 	padding: 0px;
@@ -122,6 +126,10 @@ img.medication_img {
   border-radius: 50%;
 }
 .menu.has-header
+{
+  top: 170px;
+}
+.platform-ios.platform-cordova .menu.has-header
 {
   top: 170px;
 }
