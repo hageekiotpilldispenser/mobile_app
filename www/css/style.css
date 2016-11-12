@@ -35,12 +35,11 @@ and (max-device-width : 1024px)  {
 }
 .my-container {
   /*background-image:  url("../img/colorful-triangles-background_yB0qTG6.jpg");*/
-	top: 170px;
-	background-repeat: repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  position: absolute;
+	/*background-repeat: repeat;*/
+  /*-webkit-background-size: cover;*/
+  /*-moz-background-size: cover;*/
+  /*background-size: cover;*/
+  /*position: absolute;*/
 }
 .item.transp {
   background-color: transparent;
@@ -94,18 +93,18 @@ img.medication_img {
 .scan-button-text{
   font-size: 100%;
 }
-.platform-ios.platform-cordova .bar.bar-profile {
+.platform-ios.platform-cordova .bar.bar-header.bar-profile {
   height: 170px;
 	padding: 0px;
 }
-.bar.bar-profile {
+.bar.bar-header.bar-profile {
   height: 170px;
 	padding: 0px;
 }
 .profile {
 	background-image: url("../img/profile_background.jpg");
 }
-.profile {
+.bar .profile {
   top: 0;
   right: 0;
   left: 0;
@@ -125,11 +124,11 @@ img.medication_img {
 .profile-picture {
   border-radius: 50%;
 }
-.menu.has-header
+.menu .has-header
 {
   top: 170px;
 }
-.platform-ios.platform-cordova .menu.has-header
+.platform-ios.platform-cordova .menu .has-header
 {
   top: 170px;
 }
