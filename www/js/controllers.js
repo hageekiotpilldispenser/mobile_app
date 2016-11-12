@@ -9,7 +9,7 @@ angular.module('starter.controllers', ['ionic.cloud'])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  var initLoadTime = 2000,
+  var initLoadTime = 3000,
       pollingTime = 60000,
       hasInitialized = false;
 
@@ -26,17 +26,22 @@ angular.module('starter.controllers', ['ionic.cloud'])
     $http.get("https://data.sparkfun.com/output/9J8228V88yCW3gd27Ar8", {timeout: 5000})
       .success(function(data) {
         if(typeof data != 'undefined' && data.length > 0) {
-          if(typeof data[0] != 'undefined') {
+          if(typeof data[0] != 'undefined' && data[0].time.length == 4) {
             var hour = data[0].time.substr(0,2);
             var minute = data[0].time.substr(2,4);
 
             if(hour == "00") {
               hour = 0;
+            } else {
+              hour = hour.replace(/^0+/, '');
             }
 
             if(minute == "00") {
               minute = 0;
+            } else {
+              minute = minute.replace(/^0+/, '');
             }
+
             var alarmTime = new Date();
             alarmTime.setHours(hour);
             alarmTime.setMinutes(minute);
@@ -76,7 +81,10 @@ angular.module('starter.controllers', ['ionic.cloud'])
       $cordovaLocalNotification.clearAll();
       $cordovaLocalNotification.schedule({
           id: "TestSchedule",
-          date: alarmTime,
+          //date: alarmTime,
+          autoClear: true,
+          ongoing: true,
+          at: alarmTime,
           title: "Pill Taken Notification",
           text: msg
       }).then(function () {
@@ -84,16 +92,18 @@ angular.module('starter.controllers', ['ionic.cloud'])
       });
   };
 
-  $ionicPush.register().then(function(t) {
-    return $ionicPush.saveToken(t);
-  }).then(function(t) {
-    console.log('Token saved:', t.token);
-  });
+  if(ionic.Platform.isAndroid()) {
+    $ionicPush.register().then(function(t) {
+      return $ionicPush.saveToken(t);
+    }).then(function(t) {
+      console.log('Token saved:', t.token);
+    });
 
-  $scope.$on('cloud:push:notification', function(event, data) {
-    var msg = data.message;
-    alert(msg.title + ': ' + msg.text);
-  });
+    $scope.$on('cloud:push:notification', function(event, data) {
+      var msg = data.message;
+      alert(msg.title + ': ' + msg.text);
+    });
+  }
 
   // Form data for the login modal
   $scope.loginData = {};
