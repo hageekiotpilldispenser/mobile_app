@@ -1,6 +1,22 @@
-<ion-view view-title="Schedule" hide-nav-bar="false">
+<ion-view cache-view="false" hide-nav-bar="false">
+  <ion-nav-title>{{ 'MENU_ITEM_SCHEDULE' | translate}}</ion-nav-title>
   <ion-content>
-    <div ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
-    <!-- <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=hageekiotpilldispenser%40gmail.com&amp;color=%231B887A&amp;ctz=Asia%2FHong_Kong" style="border-width:0" width="100%" height="600px" frameborder="0" scrolling="no"></iframe> -->
+    <div ui-calendar="uiConfig.calendar" id="calendar" ng-model="eventSources"></div>
+    <div class="event-header">{{eventHeader | translate}}</div>
+    <div ng-show="eventDetails" class="event-details">{{eventDetails.title | translate}}<br/><br/>
+      <table ng-show="meds != null" class="med-details">
+        <tr>
+          <td>{{medImage | translate}}</td>
+          <td>{{medName | translate}}</td>
+          <td>{{medQuatity | translate}}</td>
+        </tr>
+        <tr ng-repeat="med in meds">
+          <td><img ng-src="{{med.url}}" class="med-pic" /></td>
+          <td>{{med.name}}</td>
+          <td>{{med.quatity}}</td>
+        </tr>
+      </table>
+      <span ng-show="apptDetails != null">{{apptDetails | translate}}</div>
+    </div>
   </ion-content>
 </ion-view>

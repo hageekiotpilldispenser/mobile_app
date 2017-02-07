@@ -1,18 +1,30 @@
-<ion-view view-title="Status" hide-nav-bar="false">
-  <ion-content>
-    <ion-spinner ng-show="LoadingView" icon="spiral"></ion-spinner>
-    <div class="status_summary">
-      <h5 class="status_header">Recent Medication Taken History</h5>
-      <table class="tbl_status">
-          <tr><th></th><th>Morning</th><th>Noon</th><th>Night</th></tr>
-          <tr><td class="header">Today</td><td>Taken</td><td>&nbsp;</td><th>&nbsp;</td></tr>
-          <tr><td class="header">Yesterday</td><td>Taken</td><td>Taken</td><td>Taken</td></tr>
-      </table>
-    </div>
-    <div class="status_summary">
-      <h5 class="status_header">Medication Taken (This Month)</h5>
-      <div google-chart chart="myChartObject" style="height:330px; width:100%;">
+<ion-view cache-view="false" hide-nav-bar="false">
+  <ion-nav-title>{{ 'MENU_ITEM_STATUS' | translate}}</ion-nav-title>
+  <ion-content overflow-scroll="true">
+    <div class="status_title">{{ 'STATUS_NEXT_MED_TITLE' | translate}} {{nextMedTitle}}</div>
+    <div class="next_med_area">
+      <div class="next_med" ng-repeat="nextMed in nextMeds">
+        <img class="next_med_img" ng-src="{{nextMed.url}}" />
+        <div class="next_med_txt">{{nextMed.name}}</div>
       </div>
+    </div>
+    <div ng-repeat="dateEvent in dateEvents">
+      <div class="divider-title">{{dateEvent.title | translate}}</div>
+      <ul class="timeline">
+        <li ng-repeat="event in dateEvent.events">
+          <div ng-if="(event.useImage != true)" class="timeline-thumb bg-color-blue timeline-icon">
+            <i class="{{event.icon}}"></i>
+          </div>
+          <img ng-if="(event.useImage == true)" ng-src="{{event.imageSrc}}" alt="" class="timeline-thumb" />
+          <div class="timeline-item">
+            <h4>{{event.title | translate}}</h4>
+            <div class="timeline-stats">
+              <span>{{event.content | translate}} <span ng-show="{{event.notTaken}}"><a href="tel:+85223006555" class="button-positive"><img height="20px" src="img/phone.png"/></a></span></span>
+              <span class="pos-absolute-right"><i class="ion-ios-clock"></i> <span class="status_ago" am-time-ago="{{event.time}}"></span></span>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </ion-content>
 </ion-view>

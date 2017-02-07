@@ -1,16 +1,12 @@
-<ion-view view-title="Prescription" hide-nav-bar="false">
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>{{ 'MENU_ITEM_PRESCRIPTION' | translate}}</ion-nav-title>
   <ion-content>
     <ion-list>
       <ion-item class="item item-thumbnail-left" ng-repeat="medication in medications" href="#/app/medication/{{medication.id}}">
-        <img src="{{medication.image}}">
+        <img ng-src="{{medication.image}}">
         <h3>{{medication.title}}</h3>
-        <p>{{medication.schedule}}</p>
+        <p>{{medication.schedule | translate}}</p>
       </ion-item>
     </ion-list>
   </ion-content>
-  <!-- <div class="bar bar-footer bar-clear prescription_footer">
-    <button class="button button-full button-balanced icon-left ion-ios-camera-outline" ng-click="scanBarcode()">
-        <div class="scan-button-text">Scan Pill Dispenser QR Code</div>
-    </button>
-  </div> -->
 </ion-view>

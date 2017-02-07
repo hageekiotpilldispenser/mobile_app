@@ -1,3 +1,0 @@
-pill_dispenser.keystore
-pill_dispenser
-geek2016

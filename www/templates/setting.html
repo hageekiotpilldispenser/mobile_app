@@ -1,18 +1,11 @@
-<ion-view view-title="Setting" hide-nav-bar="false">
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>{{ 'MENU_ITEM_SETTING' | translate}}</ion-nav-title>
   <ion-content>
-    <div class="list">
-      <div class="item item-divider">
-        General
-      </div>
-      <div class="item item-toggle">
-         Receive Notification
-         <label class="toggle toggle-positive">
-           <input type="checkbox" checked="">
-           <div class="track">
-             <div class="handle"></div>
-           </div>
-         </label>
-      </div>
-    </div>
+    <ion-list>
+      <ion-item ng-style="{'height': '70px'}" ng-repeat="item in items" ng-click="showDetail(item)">
+        {{ item.title | translate }}
+        <span ng-if="item.subtitle"><br/><small>{{ item.subtitle | translate }}</small></span>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
