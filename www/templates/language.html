@@ -1,0 +1,9 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>{{ 'SETTING_LANGUAGE' | translate}}</ion-nav-title>
+  <ion-content>
+    <ion-list>
+      <ion-radio ng-model="choice" ng-value="'en'" ng-change='changeLanguage(choice)'>English</ion-radio>
+      <ion-radio ng-model="choice" ng-value="'zh-tw'" ng-change='changeLanguage(choice)'>繁體中文</ion-radio>
+    </ion-list>
+  </ion-content>
+</ion-view>

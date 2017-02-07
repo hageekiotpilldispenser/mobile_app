@@ -1,0 +1,10 @@
+<ion-view hide-nav-bar="false">
+  <ion-nav-title>{{ 'MENU_ITEM_LINK' | translate}}</ion-nav-title>
+  <ion-content>
+    <ion-list>
+      <ion-item ng-style="{'height': '70px'}" ng-repeat="item in items" ng-click="openWindow(item)">
+        {{ item.title }}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
